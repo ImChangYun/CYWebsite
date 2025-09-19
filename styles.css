@@ -1,0 +1,270 @@
+:root{
+  --bg:#0b0b0c; 
+  --fg:#f5f7fa; 
+  --muted:#a0a7b4; 
+  --card:#121316; 
+  --card-alt:#1a1b1f; 
+  --border:#24262a;
+  --brand:#6aa2ff; 
+  --brand-weak:#172033;
+  --radius: 16px;
+  color-scheme: dark;
+}
+
+*{ box-sizing:border-box; }
+
+html, body{
+  margin:0; padding:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+  line-height:1.6;
+}
+
+.container{ width:min(1120px, 92%); margin-inline:auto; }
+
+/* ---------------------- */
+/* Header / Nav */
+/* ---------------------- */
+.site-header {
+  padding:16px 0;
+  border-bottom:0.5px solid var(--border);
+  position:sticky; top:0;
+  backdrop-filter:saturate(180%) blur(12px);
+  background:color-mix(in oklab, var(--bg), transparent 30%);
+  z-index:10;
+}
+.brand { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.brand-link {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--card);
+  text-decoration: none;
+  overflow: hidden; /* ensures the image stays inside the circle */
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* scales and crops nicely */
+  border-radius: 999px; /* ensures it stays circular */
+}
+
+.nav a { color:var(--muted); text-decoration:none; margin-left:20px; font-weight:500; transition: color 0.2s ease; }
+.nav a:hover { color:var(--fg); }
+
+/* ---------------------- */
+/* Hero */
+/* ---------------------- */
+.hero{ padding:40px 0 16px; }
+.hero-grid{ display:flex; flex-direction:column; gap:24px; }
+.hero-copy{ display:grid; gap:14px; }
+.hero-photo{
+  order:-1; border-radius:9999px; border:1px solid var(--border);
+  object-fit:cover; background:#222;
+  max-width:420px; width:100%; height:auto;
+  align-self:center; justify-self:center;
+}
+@media (min-width: 900px){
+  .hero-grid{ display:grid; grid-template-columns: 6fr 5fr; align-items:start; }
+  .hero-photo{ order:0; justify-self:end; align-self:start; }
+}
+h1{ font-size:clamp(28px, 4vw, 44px); margin:0 0 10px; }
+.lede{ font-size:1.05rem; color:var(--muted); max-width:70ch; }
+
+/* Buttons */
+.hero-cta{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+.btn{ display:inline-block; padding:10px 14px; border-radius:10px; background:var(--brand); color:white; text-decoration:none; font-weight:600; }
+.btn-ghost{ background:transparent; color:var(--fg); border:1px solid var(--border); }
+.btn-ghost:hover{ background:var(--card); }
+
+/* Sections */
+.section{ padding:28px 0; }
+.section h2{ font-size:1.4rem; margin:0 0 16px; }
+
+/* Tags */
+.chips{ display:flex; gap:8px; flex-wrap:wrap; }
+.chip{ padding:6px 10px; border-radius:999px; background:var(--brand-weak); color:var(--brand); font-weight:600; font-size:.85rem; }
+
+/* ---------------------- */
+/* Cards (Homepage) */
+/* ---------------------- */
+.grid{ display:grid; gap:16px; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); }
+.card {
+  display:flex; flex-direction:column;
+  background:var(--card-alt); border-radius:var(--radius);
+  overflow:hidden; text-decoration:none; color:inherit;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  cursor:pointer; border:1px solid var(--border);
+}
+.card:hover{ background: color-mix(in oklab, var(--card-alt), var(--fg) 6%); border-color: color-mix(in oklab, var(--border), var(--fg) 15%); }
+.card:focus-visible{ outline:none; border-color:var(--brand); box-shadow:0 0 0 2px color-mix(in oklab, var(--brand), transparent 65%); }
+.card-media img{ width:100%; height:160px; object-fit:cover; display:block; background:#222; }
+.card .pad{ padding:16px; display:flex; flex-direction:column; flex:1; gap:10px; }
+.card h3{ margin:0; font-size:1.1rem; font-weight:600; }
+.card p{ margin:0; color:var(--muted); }
+.card .tags{ display:flex; gap:6px; flex-wrap:wrap; margin-top:auto; }
+.tag{ font-size:.78rem; background:transparent; border:1px solid var(--border); padding:4px 8px; border-radius:999px; color:var(--muted); }
+
+/* ---------------------- */
+/* Project Hero */
+/* ---------------------- */
+.project-hero{ display:grid; gap:20px; grid-template-columns: 1fr; margin:24px 0; }
+.project-hero img{ width:100%; height:280px; object-fit:cover; border-radius:var(--radius); background:#222; }
+.project-hero-meta{ display:grid; gap:12px; }
+@media (min-width: 900px){
+  .project-hero{ grid-template-columns: 5fr 6fr; align-items:start; }
+}
+
+/* Meta box */
+.project .meta{ display:grid; grid-template-columns: max-content 1fr; gap:8px 16px; padding:16px; border:1px solid var(--border); background:var(--card); border-radius:var(--radius); font-size:0.95rem; align-items:start; }
+.project .meta strong{ color:var(--muted); font-weight:600; white-space:nowrap; }
+.project .meta span{ color:var(--fg); }
+.project .meta div{ display:contents; }
+
+/* ---------------------- */
+/* Tabs */
+/* ---------------------- */
+.tabs{ display:flex; gap:8px; border-bottom:1px solid var(--border); margin-top:24px; }
+.tab{ appearance:none; background:transparent; border:none; padding:10px 12px; font-weight:600; color:var(--muted); cursor:pointer; border-bottom:2px solid transparent; }
+.tab.active{ color:var(--fg); border-color:var(--brand); }
+.tab-panel{ display:none; padding:18px 0; }
+.tab-panel.active{ display:block; }
+
+/* Narrow column for text (including headers) */
+.tab-panel p,
+.tab-panel ul,
+.tab-panel ol,
+.tab-panel h2,
+.tab-panel h3,
+.tab-panel h4,
+.tab-panel h5,
+.tab-panel h6 {
+  max-width:700px;
+  margin:0 auto 1.5rem auto;
+  line-height:1.6;
+  color:var(--fg);
+}
+.tab-panel p:last-child,
+.tab-panel ul:last-child,
+.tab-panel ol:last-child,
+.tab-panel h2:last-child,
+.tab-panel h3:last-child,
+.tab-panel h4:last-child,
+.tab-panel h5:last-child,
+.tab-panel h6:last-child { margin-bottom:0; }
+
+
+.tab-panel li { margin-bottom:0.75rem; }
+.tab-panel li:last-child { margin-bottom:0; }
+
+/* ---------------------- */
+/* Media inside tabs */
+/* ---------------------- */
+.tab-panel img,
+.tab-panel video,
+.tab-panel iframe {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  margin: 2rem auto;
+  border-radius: var(--radius);
+  border: none;
+  padding-inline: 0;
+  overflow: visible;
+  background-color: transparent;
+  object-fit: contain; /* applies to images & videos */
+  clip-path: none;     /* prevent unwanted cropping */
+}
+
+/* Media inside list items */
+.tab-panel li img,
+.tab-panel li video,
+.tab-panel li iframe {
+  padding-inline:0;
+  margin:1rem 0;
+}
+
+/* Responsive embeds */
+.media-embed {
+  position:relative; width:100%; max-width:1120px;
+  margin:2rem auto; padding-inline:1rem;
+  aspect-ratio:16/9; background:#000;
+  border-radius:var(--radius); overflow:hidden;
+}
+.media-embed iframe, .media-embed video {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  border:none; border-radius:var(--radius);
+}
+
+/* ---------------------- */
+/* Lightbox Image Viewer */
+/* ---------------------- */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: var(--radius);
+  transition: transform 0.25s ease;
+  cursor: zoom-in; /* toggled when zoomed out */
+}
+#lightbox .caption {
+  margin-top: 12px;
+  color: var(--fg);
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: 80%;
+}
+#lightbox .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: var(--fg);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+#lightbox img.zoomed {
+  transform: scale(1.5); /* simple zoom */
+  cursor: zoom-out;
+}
+
+/* Show zoom-in cursor on clickable images */
+.clickable-img {
+  cursor: zoom-in;
+}
+
+/* Side-by-side layout for comparison images */
+.side-by-side {
+  display: flex;
+  gap: 2rem;          /* space between the two images */
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem auto;
+  max-width: 1120px;  /* keep in line with your container width */
+}
+
+.side-by-side > div {
+  flex: 1;            /* each child takes equal width */
+  text-align: center;
+}
+
+.side-by-side img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  cursor: zoom-in;    /* consistent with your lightbox */
+}

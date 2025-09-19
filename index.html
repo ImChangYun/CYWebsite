@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Chang Yun — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <header class="site-header container">
+    <div class="brand">
+      <a class="brand-link" href="./">
+        <img src="assets/WebLogo.png" alt="Chang Yun Logo" class="brand-logo">
+      </a>
+      <nav class="nav">
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="container">
+    <section class="hero">
+    <div class="hero-grid">
+        <div class="hero-copy">
+        <h1>Hi, I’m Chang Yun.</h1>
+        <p class="lede">
+            UX Designer moving into project management, where I bring a focus on clear systems, thoughtful communication, and turning research into real outcomes!
+        </p>
+        <div class="hero-cta">
+            <a class="btn" href="https://www.linkedin.com/in/gohchangyun/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-ghost" href="mailto:gohchangyuni@gmail.com">Email</a>
+            <a class="btn btn-ghost" href="assets/Goh Chang Yun_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+        </div>
+
+        <!-- Replace assets/me.jpg with your actual image path -->
+        <img class="hero-photo" src="assets/me.jpg" alt="Portrait of Chang Yun">
+    </div>
+    </section>
+
+
+    <section id="skills" class="section">
+      <h2>Skillsets & Certifications</h2>
+      <div class="chips">
+        <span class="chip">Certified Scrum Product Owner® (CSPO)</span>
+        <span class="chip">Certified ScrumMaster® (CSM)</span>
+        <span class="chip">Figma</span>
+        <span class="chip">Product Discovery</span>
+        <span class="chip">Stakeholder Management</span>
+        <span class="chip">Scrum / Agile</span>
+        <span class="chip">Backlog Management</span>
+        <span class="chip">User Research</span>
+        <span class="chip">Prototyping (Figma)</span>
+        <span class="chip">Analytics & Experimentation</span>
+        <span class="chip">Roadmapping</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div id="project-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Chang Yun </p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

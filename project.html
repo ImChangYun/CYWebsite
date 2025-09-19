@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Project — Details</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <header class="site-header container">
+    <div class="brand">
+      <a class="brand-link" href="./">
+        <img src="assets/WebLogo.png" alt="Chang Yun Logo" class="brand-logo">
+      </a>
+      <nav class="nav">
+      </nav>
+    </div>
+  </header>
+
+  <main class="container project">
+    <div id="hero" class="project-hero">
+      <img id="hero-img" alt="" />
+      <div class="project-hero-meta">
+        <h1 id="title">Project Title</h1>
+        <p id="summary" class="lede"></p>
+        <div class="meta">
+          <div><strong>Timeframe:</strong> <span id="timeframe"></span></div>
+          <div><strong>Role:</strong> <span id="role"></span></div>
+          <div><strong>Purpose:</strong> <span id="purpose"></span></div>
+          <div><strong>Outcomes:</strong> <span id="outcomes"></span></div>
+        </div>
+        <div id="tags" class="chips"></div>
+        <div id="links" class="links"></div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="process">Process</button>
+      <button class="tab" data-tab="results">Results</button>
+    </div>
+
+    <section id="overview" class="tab-panel active"></section>
+    <section id="process" class="tab-panel"></section>
+    <section id="results" class="tab-panel"></section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Chang Yun.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+
+    <!-- Image Viewer Overlay -->
+  <div id="lightbox">
+    <button class="close-btn">&times;</button>
+    <img src="" alt="">
+    <div class="caption"></div>
+  </div>
+
+</body>
+</html>
