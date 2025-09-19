@@ -217,10 +217,10 @@
   "outcomes": "Crafted a personal brand style guide, enhancing my skills in branding and visual identity design",
   "tags": ["Photoshop", "Brand Style", "Brand Identity"],
   "skills": [],
-  "hero": "assets/brand style/Brand Style Guide Logo.png",
+  "hero": "assets/Brand Style/Brand Style Guide Logo.png",
   "links": [],
   "overview": [
-  "<object data='assets/brand style/BrandStyleGuide.pdf' type='application/pdf' width='100%' height='700px'> <p>Unable to display PDF file. <a href='resources/design__portfolio/BrandStyleGuide.pdf'>Download</a> instead.</p> </object>"
+  "<object data='assets/Brand Style/BrandStyleGuide.pdf' type='application/pdf' width='100%' height='700px'> <p>Unable to display PDF file. <a href='resources/design__portfolio/BrandStyleGuide.pdf'>Download</a> instead.</p> </object>"
   ]
 },
 {
@@ -313,7 +313,7 @@
   "outcomes": "Successfully produced a final project video incorporating individual ideation and team-contributed audio/visual materials",
   "tags": ["Video Production", "Course Project", "Psychology"],
   "skills": ["Storyboarding", "Video Editing", "Collaboration"],
-  "hero": "assets/psychology/psychvideo.png",
+  "hero": "assets/Psychology/PsychVideo.png",
   "links": [],
   "overview": [
     "<p>The video production ideation and process was done by me, while most audio recordings and the telegram chat visuals were contributed by my team members.</p>",
@@ -331,7 +331,7 @@
   "outcomes": "Produced a polished infographic on personal computing concepts, submitted as part of coursework",
   "tags": ["Infographic", "Visual Design", "Course Project"],
   "skills": ["Information Design", "Graphic Design", "Adobe Illustrator"],
-  "hero": "assets/pc infographic/pcinfographic logo.png",
+  "hero": "assets/Pc Infographic/pcinfographic logo.png",
   "links": [
   ],
   "overview": [
