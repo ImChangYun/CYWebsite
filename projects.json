@@ -178,7 +178,7 @@
     "<img src='assets/Carousell/Solution 10_Biz.png' alt='Solution 10'>",
     "<h3>Evaluation Time!</h3>",
     "<p>Here is the comparison between the current and my redesigned Information Architecture of Carousell.</p>",
-    "<div class='side-by-side'> <div> <p style='text-align:center'>Current Information Architecture</p> <img src='assets/carousell/Current IA1.jpg' alt='Current Information Architecture' class='clickable-img'> </div> <div> <p style='text-align:center'>Redesigned Information Architecture</p> <img src='assets/carousell/Redesigned IA.jpg' alt='Redesigned Information Architecture' class='clickable-img'> </div> </div>",
+    "<div class='side-by-side'> <div> <p style='text-align:center'>Current Information Architecture</p> <img src='assets/Carousell/Current IA1.jpg' alt='Current Information Architecture' class='clickable-img'> </div> <div> <p style='text-align:center'>Redesigned Information Architecture</p> <img src='assets/Carousell/Redesigned IA.jpg' alt='Redesigned Information Architecture' class='clickable-img'> </div> </div>",
     "<p>Here is the comparison between the current and my redesigned User Flow of Carousell Buyers and Sellers.</p>",
     "<p><strong>User Flow:</strong> Buyer</p>",
     "<p>This user flow shows the minimum amount of app screens that users must go through before a purchase on Carousell today.</p>",
